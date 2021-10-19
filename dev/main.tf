@@ -27,7 +27,7 @@ resource "aws_subnet" "main" {
 data "terraform_remote_state" "vpc" {
   backend = "remote"
   config = {
-    organization = "example_corp"
+    organization = "towersystems"
     workspaces = {
       name = "PROJECT-DEV"
     }
