@@ -33,8 +33,3 @@ data "terraform_remote_state" "vpc" {
     }
   }
 }
-
-resource "aws_subnet" "main" {
-  # Terraform 0.12 and later: use the "outputs.<OUTPUT NAME>" attribute
-  subnet_id = data.terraform_remote_state.vpc.outputs.subnet_id
-}
