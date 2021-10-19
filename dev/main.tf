@@ -24,12 +24,3 @@ resource "aws_subnet" "main" {
   cidr_block = "10.0.0.0/16"
 }
 
-data "terraform_remote_state" "vpc" {
-  backend = "remote"
-  config = {
-    organization = "s-pcc"
-    workspaces = {
-      name = "PROJECT-DEV"
-    }
-  }
-}
